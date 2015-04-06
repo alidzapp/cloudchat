@@ -1,0 +1,35 @@
+!!!5
+
+%html
+%head
+	%title soundmessage
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+	= csrf_meta_tags 
+	%meta{:content => user_signed_in? ? current_user.id : "", :name => "user-id"}
+
+%body
+	- if user_signed_in?
+		.navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					.navbar-brand 
+						= link_to "Cloudchat", root_path
+					%button.navbar-toggle.collapsed{"data-toggle" => "collapse", "data-target" => "#bs-example-navbar-collapse-1", type: "button"} 
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+
+				.collapse.navbar-collapse#bs-example-navbar-collapse-1
+					%ul.nav.navbar-nav.navbar-right		
+						%li= link_to current_user.username, root_path											
+						%li= link_to 'Log Out', destroy_user_session_path, method: :delete	
+
+	%notice= notice
+	%alert= alert	
+					
+								
+	
+	= yield
+
+

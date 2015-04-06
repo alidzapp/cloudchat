@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "chat";
+
+body{
+ 	background-color: #d1c5b7;
+}
+
+.block{
+	background-color: #d1c5b7;
+	padding: 100px 0px;
+
+	&:nth-child(odd){
+		background-color: #063e53;
+	}
+}
+
+.main-title{
+	color: #063e53;
+	font-size: 60px;
+	text-align: center;
+	margin: 0;
+}
+
+.small-title{
+	color: #fff;
+	text-align: center;
+}
+
+.panel-signup{
+	width: 50%;
+	margin: 0 auto;
+	background-color: #d1c5b7;
+	border-radius: 2px;
+	padding: 10px;
+}
+
+.panel-friends{
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.center{
+	text-align: center;
+}
+
+.navbar{
+	margin: 0;
+	background-color: #063e53;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+}
+
+.navbar-default{
+	.navbar-nav{
+		li {
+			a{
+				color: #fff;
+				&:hover{
+					color: #d1c5b7;
+				}
+			}
+		}		
+		}
+}
+
+.navbar-brand a{
+	color: #fff;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
