@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root 'conversations#index'
+    get '/profile' => "static_pages#profile"
   end
 
   unauthenticated :user do

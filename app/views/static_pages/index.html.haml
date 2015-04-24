@@ -1,13 +1,22 @@
 %section.block
 	%h1.main-title
-		.fa.fa-cloud
-		Cloudchat
-	.small-title
-		IRL online friend chat
+		.fa.fa-cloud Cloudchat
+		
 
-%section.block
-	%p.small-title Simple as heck friend to friend chat over the cloud
+	%h3.sub-title
+		Easy Online Messaging.
 
-	.panel-signup
-		%h2.center Sign Up Now
-		= render 'devise/registrations/new'
+	.center
+		%button.btn.btn-start
+			Get Started
+	.panel-login
+		= render 'devise/sessions/new'
+
+:javascript
+	
+	$('.panel-login').hide();
+
+	$('.btn-start').click(function(){
+		$('.btn-start').fadeOut(1);
+		$('.panel-login').show(200);
+	})
