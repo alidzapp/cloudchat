@@ -1,9 +1,11 @@
 %section
 	.panel-friends
-		- @users.each_with_index do |user, index|
-			%p
-				= user.username
-				= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation", "data-sid" => current_user.id, "data-rip" => user.id unless user == current_user
+		.friend-chat-list
+			- @users.each_with_index do |user, index|
+				%p.friend
+					= link_to user.username, "#", class: "btn btn-chat start-conversation", "data-sid" => current_user.id, "data-rip" => user.id unless user == current_user
+
+
 
 
 
