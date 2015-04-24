@@ -1,9 +1,23 @@
 %section
+
+	.create-post
+		= render 'posts/new_post'
+
+	.posts-panel
+		- @posts.each do |p|
+			.post
+				.post-header
+					= p.user.username
+				.post-content
+					= p.content
+
 	.panel-friends
 		.friend-chat-list
 			- @users.each_with_index do |user, index|
 				%p.friend
 					= link_to user.username, "#", class: "btn btn-chat start-conversation", "data-sid" => current_user.id, "data-rip" => user.id unless user == current_user
+
+
 
 
 

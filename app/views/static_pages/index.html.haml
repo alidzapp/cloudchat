@@ -1,6 +1,8 @@
 %section.block
 	%h1.main-title
-		.fa.fa-cloud Cloudchat
+		%a{href: "/"}
+			%span
+				.fa.fa-cloud Cloudchat
 		
 
 	%h3.sub-title
@@ -19,4 +21,4 @@
 	$('.btn-start').click(function(){
 		$('.btn-start').fadeOut(1);
 		$('.panel-login').show(200);
-	})
+	});

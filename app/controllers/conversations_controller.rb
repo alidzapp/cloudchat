@@ -6,7 +6,10 @@ class ConversationsController < ApplicationController
 
 	def index
 		@users = User.all
+		@posts = Post.all
+		@post = current_user.posts.build
 	end
+
 
 	def create
 		if Conversation.between(params[:sender_id], params[:recipient_id]).present?

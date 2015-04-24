@@ -27,6 +27,18 @@ body{
  	background-color: #517398;
 }
 
+textarea{
+	resize: none;
+}
+
+a{
+	color: inherit;
+
+	&:hover{
+		color: inherit;
+	}
+}
+
 .block{
 	background-color: #517398;
 	padding: 50px 0px;
@@ -174,4 +186,54 @@ body{
 		background-color: #517398;
 		transition: all 0.5s;
 	}
+}
+
+.btn-post{
+	margin-top: 10px;
+	width: 150px;
+	padding: 12px;
+	background-color: #517398;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	transition: all 1s;
+
+	&:hover{
+		background-color: #262c3a;
+		color: #fff;
+		transition: all 1s;
+	}
+}
+
+.create-post{
+	width: 50%;
+	margin: 50px auto 0px auto;
+}
+
+.posts-panel{
+	padding-top: 50px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.post{
+	margin: 5px;
+	width: 47%;
+	background-color: #fff;
+	padding: 10px;
+	float: left;
+}
+
+.post-header{
+
+}
+
+.post-content{
+
+}
+
+.alert{
+	background-color: #fff;
+	color: #262c3a;
+	border-radius: 0;
 }
