@@ -91,19 +91,21 @@ a{
 }
 
 .panel-friends{
-	border-left: 1px solid #fff;
-	border-top: 1px solid #fff;
- 	border-top-left-radius: 10px;
+	top: 100px;
 	position: absolute;
 	right: 0;
-	bottom: 0;
-	height: 75%;
+	height: 100%;
 	width: 20%;
-	float: right;
-	padding-top: 100px;
+}
+
+.friends-title{
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
 }
 
 .friend-chat-list{
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -175,9 +177,9 @@ a{
 
 .btn-chat{
 	width: 100%;
-	background-color: #fff;
-	border-radius: 0;
-	color: #262c3a;
+	background-color: #517398;
+	border-radius: 10px;
+	color: #fff;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	transition: all 0.5s;
@@ -206,22 +208,34 @@ a{
 }
 
 .create-post{
-	width: 50%;
-	margin: 50px auto 0px auto;
+	width: 75%;
+	margin-top: 50px;
+	padding-left: 10%;
 }
 
 .posts-panel{
 	padding-top: 50px;
-	width: 50%;
-	margin: 0 auto;
+	width: 75%;
+	padding-left: 10%;
 }
 
 .post{
 	margin: 5px;
 	width: 47%;
-	background-color: #fff;
+	background-color: #517398;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 10px;
 	padding: 10px;
 	float: left;
+	transition: all 0.5s;
+
+
+	&:hover{
+		background-color: #fff;
+		color: #517398;
+		transition: all 0.5s;
+	}
 }
 
 .post-header{

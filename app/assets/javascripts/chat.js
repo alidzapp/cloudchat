@@ -102,9 +102,9 @@ var ready = function () {
             }
  
             if (chatBoxeslength == 0) {
-                $("#chatbox_" + conversation_id).css('right', '21%');
+                $("#chatbox_" + conversation_id).css('right', '20px');
             } else {
-                width = (chatBoxeslength) * (280 + 7) + 20;
+                width = (chatBoxeslength) * (280 + 7) + 20; 
                 $("#chatbox_" + conversation_id).css('right', width + 'px');
             }
  

@@ -8,15 +8,17 @@
 			.post
 				.post-header
 					= p.user.username
+					= link_to 'X', p, method: :delete, data: { confirm: "Are you sure?" }
 				.post-content
 					= p.content
 
 	.panel-friends
+		.friends-title
+			Online Friends
 		.friend-chat-list
 			- @users.each_with_index do |user, index|
 				%p.friend
 					= link_to user.username, "#", class: "btn btn-chat start-conversation", "data-sid" => current_user.id, "data-rip" => user.id unless user == current_user
-
 
 
 
