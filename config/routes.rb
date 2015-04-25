@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root 'conversations#index'
-    get '/profile' => "static_pages#profile"
+    get '/profile', to: "static_pages#profile"
+    get '/request_friend', to: "static_pages#request_friend"
+    get '/add_friend', to: "static_pages#add_friend"
   end
 
   unauthenticated :user do

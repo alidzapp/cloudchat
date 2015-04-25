@@ -1,9 +1,10 @@
 %section
 	.profile-panel
 		.profile-title
-			%h1
-				= @user.username
-				%p= link_to 'edit', edit_user_registration_path if @user.id == current_user.id
+			%h1= @user.username
+			%p= link_to 'edit', edit_user_registration_path if @user.id == current_user.id
+			%p= friend_status(@user.id)
+			%p= check_request(@user)
 		.profile-content
 			%p
 				Email: 

@@ -7,5 +7,8 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :conversations, :foreign_key => :sender_id
 
+  serialize :friend_list, Array
+  serialize :friend_pending, Array
+
   validates :username, presence: true, length: {maximum:20}
 end
