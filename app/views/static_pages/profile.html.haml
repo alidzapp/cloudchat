@@ -1,2 +1,19 @@
 %section
-	%h1= current_user.username
+	.profile-panel
+		.profile-title
+			%h1
+				= @user.username
+				%p= link_to 'edit', edit_user_registration_path if @user.id == current_user.id
+		.profile-content
+			%p
+				Email: 
+				= @user.email
+			%p
+				Number of Posts:
+				= @user.posts.count
+			%p
+				About Me:
+				- if @user.bio.nil? && @user.id == current_user.id
+					= link_to "add about", edit_user_registration_path
+				- else
+					= @user.bio

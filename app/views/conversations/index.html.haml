@@ -7,8 +7,11 @@
 		- @posts.each do |p|
 			.post
 				.post-header
-					= p.user.username
-					= link_to 'X', p, method: :delete, data: { confirm: "Are you sure?" }
+					.post-header-username
+						= link_to p.user.username, profile_path(:id => p.user.id)
+					.post-header-options
+						- if p.user.id == current_user.id
+							= link_to 'X', p, method: :delete, data: { confirm: "Are you sure?" }
 				.post-content
 					= p.content
 

@@ -5,5 +5,5 @@
 	.chatboxmessagecontent
 		%p= message.body
 		%time{:datetime => message.created_at, :title => message.created_at.strftime("%d %b  %Y at %I:%M%p")}
-			= message_interlocutor(message).email
+			= message_interlocutor(message).username
 			= message.created_at.strftime("%H:%M %p")

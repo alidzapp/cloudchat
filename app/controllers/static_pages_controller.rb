@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
 
 	def profile
 		@users = User.all
+		@user = User.find(params[:id])
 	end
 
 end
