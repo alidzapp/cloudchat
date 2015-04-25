@@ -13,6 +13,11 @@
 			Get Started
 	.panel-login
 		= render 'devise/sessions/new'
+		%br
+		%p.center
+			Dont have an account?
+			= link_to "Sign up now", new_user_registration_path
+
 
 :javascript
 	
