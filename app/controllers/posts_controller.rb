@@ -15,6 +15,9 @@ class PostsController < ApplicationController
 
 		if @post.save
 			redirect_to root_path
+			@notification = current_user.notifications.build
+			@notification.content = "new post"
+			current_user.save
 		else
 			render 'new'
 		end

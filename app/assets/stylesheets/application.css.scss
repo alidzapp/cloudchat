@@ -267,6 +267,22 @@ a{
 
 }
 
+.notification-list{
+	width: 120px;
+	text-align: center;
+	z-index: 9999;
+	background-color: #262C3A;
+	position: absolute;
+}
+.notification{
+	color: #fff;
+	padding: 10px;
+}
+
+.fa-newspaper-o{
+	cursor: pointer;
+}
+
 .alert{
 	background-color: #fff;
 	color: #262c3a;

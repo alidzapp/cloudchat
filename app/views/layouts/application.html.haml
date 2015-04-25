@@ -22,6 +22,16 @@
 
 				.collapse.navbar-collapse#bs-example-navbar-collapse-1
 					%ul.nav.navbar-nav.navbar-right		
+						%li
+							%a
+								%i.fa.fa-newspaper-o
+							- if notification_check
+								.notification-list														
+									- current_user.notifications.each do |n|
+										.notification= link_to n.content, root_path
+							- else
+								.notification-list
+									.notification No new notifications.
 						%li= link_to current_user.username, profile_path(:id => current_user.id)									
 						%li= link_to 'Log Out', destroy_user_session_path, method: :delete	
 
@@ -30,5 +40,9 @@
 
 	= yield
 
+	:javascript
+		$('.notification-list').hide();
 
-
+		$('.fa-newspaper-o').click(function(){
+			$('.notification-list').toggle(100);
+		});

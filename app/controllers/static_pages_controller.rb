@@ -26,4 +26,9 @@ class StaticPagesController < ApplicationController
 		@user.save
 		redirect_to profile_path(:id => @user.id)
 	end
+
+	private
+		def notification_params
+			params.require(:notification).permit(:content)
+		end
 end
